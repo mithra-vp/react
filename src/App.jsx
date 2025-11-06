@@ -1,6 +1,13 @@
 
 import './App.css'
-import Counter from './functional-components/hooks/useState/Counter'
+import Home from './functional-components/hooks/useContext/theme/Home'
+import { ThemeProvider } from './functional-components/hooks/useContext/theme/ThemeContext'
+import UserList from './functional-components/hooks/useEffect/UserList'
+// import UseEff from './functional-components/hooks/useEffect/useEff'
+// import Object from './functional-components/hooks/useState/Object'
+// import ToggleButton from './functional-components/hooks/useState/ToggleButton'
+// import Input from './functional-components/hooks/useState/Input'
+// import Counter from './functional-components/hooks/useState/Counter'
 // import Props from './functional-components/Props'
 // import State from './functional-components/State'
 // import Basic from './functional-components/Basic'
@@ -12,19 +19,34 @@ function App() {
 
   return (
     <>
-     {/* -------embedding-expression-------}
+      {/* -------embedding-expression-------}
     {/* <Basic/> */}
-    {/* <Welcome/> */}
-    {/* <Conditional/>*/}
+      {/* <Welcome/> */}
+      {/* <Conditional/>*/}
 
 
-    {/* functional-components */}
-    {/* <Basic/> */}
-    {/* <State/> */}
-    {/* <Props/> */}
+      {/* functional-components */}
+      {/* <Basic/> */}
+      {/* <State/> */}
+      {/* <Props/> */}
 
-    {/* -------hooks--------- */}
-    <Counter/>
+      {/* -------hooks--------- */}
+      {/* -------useState----- */}
+      {/* <Counter/> */}
+      {/* <Input/> */}
+      {/* <ToggleButton/> */}
+      {/* <Object/> */}
+
+      {/* ------useEffect------ */}
+      {/* <UseEff/> */}
+      {/* <UserList /> */}
+
+      {/* ------useContext------ */}
+      {/* 1. --(theme)-- */}
+      <ThemeProvider>
+        <Home/>
+      </ThemeProvider>
+
     </>
   )
 }
@@ -51,16 +73,16 @@ export default App
 //   render() {
 //     return (
 //       <div>
-        {/* <BasicClass/> */}
-        {/* <Counter/> */}
+{/* <BasicClass/> */ }
+{/* <Counter/> */ }
 
-        {/* --------life cycle methods--------- */}
-        {/* this is when the component is being created and inserted into to DOM */}
+{/* --------life cycle methods--------- */ }
+{/* this is when the component is being created and inserted into to DOM */ }
 
-        {/* <Mounting/> */}
-        {/* <Update/> */}
-        {/* <List/> */}
-        {/* <ShouldUpdate/> */}
+{/* <Mounting/> */ }
+{/* <Update/> */ }
+{/* <List/> */ }
+{/* <ShouldUpdate/> */ }
 {/* //         <UnMounting/>
 //       </div> */}
 {/* //     )
