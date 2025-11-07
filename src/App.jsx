@@ -1,8 +1,11 @@
 
 import './App.css'
-import Home from './functional-components/hooks/useContext/theme/Home'
-import { ThemeProvider } from './functional-components/hooks/useContext/theme/ThemeContext'
-import UserList from './functional-components/hooks/useEffect/UserList'
+// import { UserApiProvider } from './functional-components/hooks/useContext/userList/UserApiContext'
+// import UserList from './functional-components/hooks/useContext/userList/UserList'
+// import Home from './functional-components/hooks/useContext/theme/Home'
+// import { ThemeProvider } from './functional-components/hooks/useContext/theme/ThemeContext'
+// import UserList from './functional-components/hooks/useEffect/UserList'
+// import UseUpdate from './functional-components/hooks/useEffect/UseUpdate'
 // import UseEff from './functional-components/hooks/useEffect/useEff'
 // import Object from './functional-components/hooks/useState/Object'
 // import ToggleButton from './functional-components/hooks/useState/ToggleButton'
@@ -40,13 +43,18 @@ function App() {
       {/* ------useEffect------ */}
       {/* <UseEff/> */}
       {/* <UserList /> */}
+      {/* <UseUpdate/> */}
 
       {/* ------useContext------ */}
       {/* 1. --(theme)-- */}
-      <ThemeProvider>
-        <Home/>
-      </ThemeProvider>
+      {/* <ThemeProvider> */}
+        {/* <Home/> */}
+      {/* </ThemeProvider> */}
+      {/* 2. user list */}
 
+      {/* <UserApiProvider>
+        <UserList/>
+      </UserApiProvider> */}
     </>
   )
 }
