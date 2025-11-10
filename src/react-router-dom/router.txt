@@ -1,0 +1,13 @@
+Router
+
+for navigation
+defining multiple pages
+dynamic routing (one page unique datas)
+
+npm i react-router-dom  (installation)
+
+ <BrowserRouter> </BrowserRouter> in main.jsx   for routing enable 
+
+ <Routes> {for all routing it is a container}
+
+ enth visible avanam nn ullath router vach aanu
