@@ -1,15 +1,27 @@
 
+
 import './App.css'
-import ProductDetail from './dynamic-routing/ProductDetail'
-import Products from './dynamic-routing/Products'
+// import ProductDetail from './dynamic-routing/ProductDetail'
 // import Products from './dynamic-routing/Products'
-import { Routes, Route} from 'react-router-dom'
-import Home from './nested-routing/pages/Home'
-import Navbar from './nested-routing/Navbar'
-import About from './nested-routing/pages/About'
-import Services from './nested-routing/pages/Services'
-import WebDev from './nested-routing/pages/services/WebDev'
-import AppDev from './nested-routing/pages/services/AppDev'
+
+// -------second navbar (project------)
+// import Navbar from './project/Navbar'
+import Home from './project/pages/Home'
+import { Route, Routes } from 'react-router-dom'
+import About from './project/pages/About'
+import Footer from './project/Footer'
+import Contact from './project/pages/Contact'
+// import Products from './dynamic-routing/Products'
+// --------first navbar code--------
+// import { Routes, Route} from 'react-router-dom'
+// import Home from './nested-routing/pages/Home'
+// import Navbar from './nested-routing/Navbar'
+// import About from './nested-routing/pages/About'
+// import Services from './nested-routing/pages/Services'
+// import WebDev from './nested-routing/pages/services/WebDev'
+// import AppDev from './nested-routing/pages/services/AppDev'
+
+
 // import Home from './react-router-dom/Home'
 // import About from './react-router-dom/About'
 // import Ref from './tasks/Ref'
@@ -30,6 +42,10 @@ import AppDev from './nested-routing/pages/services/AppDev'
 // import Conditional from './embedding-expression/Conditional'
 // import CallingFunction from './embedding-expression/CallingFunction'
 // import Welcome from './embedding-expression/Welcome'
+// import Person from './embedding-expression/person'
+// import Items from './react-keys/Items'
+// import Allproducts from './react-keys/Allproducts'
+import SimpleForm from './form/SimpleForm'
 
 function App() {
 
@@ -39,6 +55,7 @@ function App() {
     {/* <Basic/> */}
       {/* <Welcome/> */}
       {/* <Conditional/>*/}
+      {/* <Person/> */}
 
 
       {/* functional-components */}
@@ -90,16 +107,34 @@ function App() {
       </Routes> */}
 
       {/* 3. ----nested routing---- */}
-        <Navbar/>
+        {/* <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
+          <Route path='/about' element={<About/>}/> */}
           {/* nested route */}
-          <Route path='/services' element={<Services/>}>
+          {/* <Route path='/services' element={<Services/>}>
             <Route path='web-dev' element={<WebDev/>}/>
             <Route path='app-dev' element={<AppDev/>}/>
           </Route>          
-        </Routes>
+        </Routes> */}
+        
+          {/* <Navbar/>
+        
+          <Routes>
+            <Route path='/'element={<Home/>}/>
+            <Route path='/about'element={<About/>}/>
+            <Route path='/contact'element={<Contact/>}/>
+          </Routes>
+          <Footer/> */}
+
+          {/* ----------react keys-------- */}
+          {/* <Items/> */}
+          {/* <Allproducts/> */}
+
+
+          {/* -------form validation--------- */}
+
+          <SimpleForm/>
     </>
   )
 }

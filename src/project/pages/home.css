@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .details {
+    display: flex;                /* Enables side-by-side layout */
+    align-items: center;          /* Vertically centers content */
+    justify-content: right; /* Adds space between text & image */
+    padding: 150px 80px ;
+    gap: 500px;                    /* Adds space between columns */
+  }
+  
+  .details div {
+    flex: 1;                      /* Makes both sides flexible */
+  }
+  
+  .det img {
+    width: 250px;                 /* Adjust image size */
+    height: 250px;
+    border-radius:50%;          /* Optional: rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: soft shadow */
+  }
+ 
+  @media (max-width: 768px) {
+    .details {
+      flex-direction: column;     /* Stack vertically */
+      text-align: center;
+    }
+  
+    .det img {
+      width: 80%;
+      margin-top: 20px;
+    }
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 40px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 15px 0 10px;
+    color: #333;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 15px;
+    padding: 0 15px 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  }
+  
+  

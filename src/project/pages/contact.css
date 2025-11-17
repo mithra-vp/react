@@ -1,0 +1,33 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* makes it responsive on small screens */
+    padding: 40px 40px;
+  }
+  
+  .contact-details {
+    flex: 1;
+  }
+  
+  .contact-details h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-map {
+    flex: 1;
+    text-align: right;
+    margin-top: 4%;
+  }
+  
+  iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
