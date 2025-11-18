@@ -45,7 +45,8 @@ import Contact from './project/pages/Contact'
 // import Person from './embedding-expression/person'
 // import Items from './react-keys/Items'
 // import Allproducts from './react-keys/Allproducts'
-import SimpleForm from './form/SimpleForm'
+// import SimpleForm from './form/SimpleForm'
+import Form from './form/Form'
 
 function App() {
 
@@ -134,7 +135,8 @@ function App() {
 
           {/* -------form validation--------- */}
 
-          <SimpleForm/>
+          {/* <SimpleForm/> */}
+          <Form/>
     </>
   )
 }
