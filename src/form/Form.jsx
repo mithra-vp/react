@@ -19,8 +19,52 @@ const Form = () => {
             [name]:value                //update formData using the input's name as key & the value as the new value
     }))
     }
+    const validation = () => {
+        const newErrors = {};
+
+        const {name,email,age,password,confirmPassword,gender} = formData;
+        if(!name.trim())newErrors.name="Name is required!";
+        else if(!/^[A-Za-z\s]*$/.test(name))newErrors.name = "Name should only contain alphabets";
+
+        if(!email)newErrors.email = "Email is required!";
+        else if(!/^\S+@\S+\.\S+$/.test(email))newErrors.email = "Email is invalid";
+
+        if(!age)newErrors.age = "Age is required!";
+        else if(isNaN(age) || age < 1 || age > 120)newErrors.age = "Age must be between 1 and 120";
+
+        if(!password)newErrors.password = "Password is required";
+        else if (password.length < 6)newErrors.password = "Password must be atleast 6 characters";
+
+        if(!confirmPassword)newErrors.confirmPassword = "Please confirm your password";
+        else if(password !== confirmPassword) newErrors.confirmPassword = "Password do not match.";
+
+        if(!gender)newErrors.gender = "Gender is required";
+
+        return newErrors;
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const validationErrors = validation();
+
+        if(Object.keys(validationErrors).length > 0){
+            setErrors(validationErrors);
+        }else{
+            setErrors({});
+            alert("form submitted successfully");
+            console.log('form data:',formData);
+
+            setFormData({
+                name: '',
+                email: '',
+                age: '',
+                password: '',
+                confirmPassword: '',
+                gender: ''
+            })
+        }
+    }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
         {/* name */}
         <div>
         <input 
@@ -30,6 +74,7 @@ const Form = () => {
         placeholder='Name'
         onChange={handleChange}
          />
+         {errors.name && <p style={{color:'red'}}>{errors.name}</p>}
          </div>
          {/* email */}
          <div>
@@ -40,6 +85,8 @@ const Form = () => {
           placeholder='Your Email'
           onChange={handleChange}
         />
+        {errors.email && <p style={{color:'red'}}>{errors.email}</p>}
+
         </div>
         {/* age */}
         <div>
@@ -49,6 +96,8 @@ const Form = () => {
              value={formData.age}
              placeholder='Your age'
              onChange={handleChange} />
+            {errors.age && <p style={{color:'red'}}>{errors.age}</p>}
+
         </div>
         {/* password */}
         <div>
@@ -59,6 +108,8 @@ const Form = () => {
             placeholder='Your password'
             onChange={handleChange}
              />
+            {errors.password && <p style={{color:'red'}}>{errors.password}</p>}
+
         </div>
         {/* confirm password */}
         <div>
@@ -69,6 +120,8 @@ const Form = () => {
             placeholder='Confirm your password' 
             onChange={handleChange}
             />
+           {errors.confirmPassword && <p style={{color:'red'}}>{errors.confirmPassword}</p>}
+
         </div>
         {/* gender */}
         <div>
@@ -90,6 +143,7 @@ const Form = () => {
                 onChange={handleChange}
                 checked={formData.gender === 'female'}/>Female
             </label>
+            {errors.gender && <p style={{color:'red'}}>{errors.gender}</p>}
         </div>
         <button type='submit'>Submit</button>
     </form>

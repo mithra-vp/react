@@ -1,16 +1,17 @@
 
 
 import './App.css'
+import Ftask from './form/Ftask'
 // import ProductDetail from './dynamic-routing/ProductDetail'
 // import Products from './dynamic-routing/Products'
 
 // -------second navbar (project------)
 // import Navbar from './project/Navbar'
-import Home from './project/pages/Home'
-import { Route, Routes } from 'react-router-dom'
-import About from './project/pages/About'
-import Footer from './project/Footer'
-import Contact from './project/pages/Contact'
+// import Home from './project/pages/Home'
+// import { Route, Routes } from 'react-router-dom'
+// import About from './project/pages/About'
+// import Footer from './project/Footer'
+// import Contact from './project/pages/Contact'
 // import Products from './dynamic-routing/Products'
 // --------first navbar code--------
 // import { Routes, Route} from 'react-router-dom'
@@ -46,7 +47,12 @@ import Contact from './project/pages/Contact'
 // import Items from './react-keys/Items'
 // import Allproducts from './react-keys/Allproducts'
 // import SimpleForm from './form/SimpleForm'
-import Form from './form/Form'
+// import Form from './form/Form'
+
+// -----------local storage-----------
+
+// import Crud from './local-storage/Crud'
+
 
 function App() {
 
@@ -136,7 +142,12 @@ function App() {
           {/* -------form validation--------- */}
 
           {/* <SimpleForm/> */}
-          <Form/>
+          {/* <Form/> */}
+
+          {/* -----local storage------ */}
+          {/* <Crud/> */}
+          
+          <Ftask/>
     </>
   )
 }
