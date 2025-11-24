@@ -100,47 +100,56 @@ const Ftask = () => {
             <form onSubmit={handleSubmit} className="form-box">
                 {/* First Name */}
                 <div className="row-1">
-                    <input
-                        type="text"
-                        name="firstName"
-                        value={data.firstName}
-                        placeholder="First Name"
-                        onChange={handleChange}
-                    />
-                    {errors.firstName && <p className='err'>{errors.firstName}</p>}
+                    <div>
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={data.firstName}
+                            placeholder="First Name"
+                            onChange={handleChange}
+                        />
+                        {errors.firstName && <p className='err'>{errors.firstName}</p>}
 
-                    {/* Last Name */}
-                    <input
-                        type="text"
-                        name="lastName"
-                        value={data.lastName}
-                        placeholder="Last Name"
-                        onChange={handleChange}
-                    />
-                    {errors.lastName && <p className='err'>{errors.lastName}</p>}
+                    </div>
+
+                    <div>
+                        {/* Last Name */}
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={data.lastName}
+                            placeholder="Last Name"
+                            onChange={handleChange}
+                        />
+                        {errors.lastName && <p className='err'>{errors.lastName}</p>}
+                    </div>
                 </div>
 
                 {/* Email */}
                 <div className="row-2">
-                    <input
-                        type="email"
-                        name="email"
-                        value={data.email}
-                        placeholder="Email"
-                        onChange={handleChange}
-                    />
-                    {errors.email && <p className='err'>{errors.email}</p>}
+                    <div>
+                        <input
+                            type="email"
+                            name="email"
+                            value={data.email}
+                            placeholder="Email"
+                            onChange={handleChange}
+                        />
+                        {errors.email && <p className='err'>{errors.email}</p>}
 
-                    {/* Phone */}
+                    </div>
+                    <div>
+                        {/* Phone */}
 
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={data.phone}
-                        placeholder="Phone Number"
-                        onChange={handleChange}
-                    />
-                    {errors.phone && <p className='err'>{errors.phone}</p>}
+                        <input
+                            type="tel"
+                            name="phone"
+                            value={data.phone}
+                            placeholder="Phone Number"
+                            onChange={handleChange}
+                        />
+                        {errors.phone && <p className='err'>{errors.phone}</p>}
+                    </div>
                 </div>
                 {/* Country */}
                 <div className="row">
@@ -235,7 +244,7 @@ const Ftask = () => {
                                 address: '',
                                 position: '',
                                 additionalInfo: '',
-                                addCv: null,
+                                addCv: '',
                             })
                         }
                     >

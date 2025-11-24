@@ -1,7 +1,7 @@
 
 
 import './App.css'
-import Ftask from './form/Ftask'
+// import Ftask from './form/Ftask'
 // import ProductDetail from './dynamic-routing/ProductDetail'
 // import Products from './dynamic-routing/Products'
 
@@ -51,7 +51,7 @@ import Ftask from './form/Ftask'
 
 // -----------local storage-----------
 
-// import Crud from './local-storage/Crud'
+import Crud from './local-storage/Crud'
 
 
 function App() {
@@ -145,9 +145,9 @@ function App() {
           {/* <Form/> */}
 
           {/* -----local storage------ */}
-          {/* <Crud/> */}
+          <Crud/>
           
-          <Ftask/>
+          {/* <Ftask/> */}
     </>
   )
 }

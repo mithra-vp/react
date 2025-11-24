@@ -17,17 +17,17 @@ const Crud = () => {
     // ========get======
     useEffect(() => {
         const stored = localStorage.getItem("users");
-        if(stored){
+        if (stored) {
             try {
                 const parsedUser = JSON.parse(stored);
                 setUsers(parsedUser);
             } catch (error) {
-                console.log('Error passing data',error);
+                console.log('Error passing data', error);
                 localStorage.removeItem("users");     //clear corrupted data               
             }
         }
         setIsLoaded(true);
-    },[]);
+    }, []);
 
     // =====add=======
     //save users to local storage(whenever user changes. only after initial load)
@@ -86,6 +86,34 @@ const Crud = () => {
         setErrors({});
     }
 
+    const handleEdit = (user) => {
+        setFormData(user);
+        setEditMode(true);
+    }
+
+    const handleCancel = () => {
+        setFormData({ id: '', name: '', email: '', age: '' });
+        setErrors({})
+        setEditMode(false);
+    }
+
+    const handleClearAll = () => {
+        if (window.confirm("Are you sure you want to clear all data? this action can not be undone.")) {
+            setUsers([]);
+            localStorage.removeItem(users);
+
+            // edit mode reset
+            if (editMode) {
+                setFormData({ id: '', name: '', email: '', age: '' });
+                setErrors({})
+                setEditMode(false);
+            }
+        }
+    }
+
+    const handleDelete = (id)=> {
+        setUsers(users.filter(user => user.id !== id))
+    }
     return (
         <div className='formnew'>
             <h1>React - crud</h1>
@@ -126,9 +154,48 @@ const Crud = () => {
                 </div>
                 <button type='submit'>{editMode ? 'Update User' : 'Add User'}</button>
                 {editMode && (
-                    <button style={{ marginLeft: '10px' }} type='button'>Cancel</button>
+                    <button onClick={handleCancel} style={{ marginLeft: '10px' }} type='button'>Cancel</button>
                 )}
             </form>
+            {/* clear button */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                <h2>User List</h2>
+                {users.length > 0 && (
+                    <button onClick={handleClearAll} style={{ backgroundColor: 'red', color: 'white', border: 'none', padding: '8px 12px', borderRadius: '4px', cursor: 'pointer', marginLeft: '30px' }}>
+                        Clear All
+                    </button>
+                )}
+            </div>
+
+            {/* table design */}
+            {users.length > 0 ? (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map(user => (
+                            <tr key={user.id}>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.age}</td>
+                                <td>
+                                    <button onClick={() => handleEdit(user)}>Edit</button>
+                                    <button onClick={() => handleDelete(user.id)} style={{ marginLeft: '10px' }}>Delete</button>
+                                </td>
+                            </tr>
+
+                        ))}
+                    </tbody>
+                </table>
+            ) : (
+                <p> No user added yet</p>
+            )}
         </div>
     )
 }
