@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import AxiosGet from './axios/AxiosGet'
 // import Ftask from './form/Ftask'
 // import ProductDetail from './dynamic-routing/ProductDetail'
 // import Products from './dynamic-routing/Products'
@@ -145,9 +146,13 @@ function App() {
           {/* <Form/> */}
 
           {/* -----local storage------ */}
-          <Crud/>
+          {/* <Crud/> */}
           
           {/* <Ftask/> */}
+
+          {/* ------------axios------------ */}
+          <AxiosGet/>
+
     </>
   )
 }
