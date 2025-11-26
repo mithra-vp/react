@@ -1,0 +1,110 @@
+.todo-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background-color: #98afc9;
+}
+.title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.message {
+  background: #d4ffd4;
+  padding: 10px;
+  border-left: 4px solid #1f8b1f;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #036603;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.add-btn { background: #007bff; color: white; }
+.add-btn:hover { background: #005fcc; }
+
+.edit-btn { background: #ffb300; color: white; }
+.edit-btn:hover { background: #e09c00; }
+
+.save-btn { background: #22bb33; color: white; }
+.save-btn:hover { background: #1b9b2a; }
+
+.cancel-btn { background: #777; color: white; }
+.cancel-btn:hover { background: #555; }
+
+.delete-btn { background: #ff4d4d; color: white; }
+.delete-btn:hover { background: #d93636; }
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.empty-text {
+  color: #777;
+  font-style: italic;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  padding: 12px;
+  background: #f6f6f6;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.15s;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size:  15px;
+}

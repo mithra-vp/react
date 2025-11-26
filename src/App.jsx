@@ -1,7 +1,9 @@
 
 
 import './App.css'
-import AxiosGet from './axios/AxiosGet'
+import AxiosPost from './axios/AxiosPost'
+import ToDo from './tasks/ToDo'
+// import AxiosGet from './axios/AxiosGet'
 // import Ftask from './form/Ftask'
 // import ProductDetail from './dynamic-routing/ProductDetail'
 // import Products from './dynamic-routing/Products'
@@ -52,7 +54,8 @@ import AxiosGet from './axios/AxiosGet'
 
 // -----------local storage-----------
 
-import Crud from './local-storage/Crud'
+// import Crud from './local-storage/Crud'  
+// import SessionExample from './session-storage/SessionExample'
 
 
 function App() {
@@ -147,11 +150,16 @@ function App() {
 
           {/* -----local storage------ */}
           {/* <Crud/> */}
+
+          {/* session storage */}
+          {/* <SessionExample/> */}
           
           {/* <Ftask/> */}
+          <ToDo/>
 
           {/* ------------axios------------ */}
-          <AxiosGet/>
+          {/* <AxiosGet/> */}
+          {/* <AxiosPost/> */}
 
     </>
   )
